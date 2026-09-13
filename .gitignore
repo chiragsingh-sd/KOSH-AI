@@ -1,0 +1,29 @@
+# Node
+node_modules/
+dist/
+.env
+frontend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+*.db
+*.sqlite3
+.pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# Data — contents ignored, directories tracked via .gitkeep
+data/uploads/*
+data/knowledge_base/*
+data/outputs/*
+!data/uploads/.gitkeep
+!data/knowledge_base/.gitkeep
+!data/outputs/.gitkeep
