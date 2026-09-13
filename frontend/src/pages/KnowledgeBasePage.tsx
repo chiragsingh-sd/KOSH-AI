@@ -174,11 +174,10 @@ export const KnowledgeBasePage: React.FC = () => {
     <div className="knowledge-page">
       <div className="page-header">
         <div>
-          <div className="eyebrow">KNOWLEDGE</div>
-          <h1>Knowledge Base</h1>
+          <div className="eyebrow">K.O.S.H AI · SOVEREIGN LOCAL RAG</div>
+          <h1>Knowledge Sources &amp; SOP Standards</h1>
           <p>
-            Upload organizational documents and index them for grounded AI
-            retrieval.
+            Index plant standard operating procedures, API/OISD standards, and equipment specifications into the local vector store for grounded, hallucination-free compliance reasoning.
           </p>
         </div>
 

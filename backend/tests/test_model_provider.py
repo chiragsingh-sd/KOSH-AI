@@ -1,4 +1,4 @@
-"""Tests for the AI Workbench model provider contract."""
+"""Tests for the K.O.S.H AI model provider contract."""
 
 from app.ai.model_provider import ModelProvider, ModelProviderError
 from app.models.model import (

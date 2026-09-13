@@ -1,32 +1,54 @@
-# React + TypeScript + Vite
+# K.O.S.H AI — Frontend Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Sovereign On-Premise Agentic AI Workbench for Confidential Industrial Work**  
+*Problem Statement: SIH26117 | Team ODIN*
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
 
-## React Compiler
+This is the web frontend client for **K.O.S.H AI**, engineered specifically for refinery engineers, maintenance supervisors, plant operators, and compliance officers. It provides an intuitive, high-visibility control surface for:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Project Documents**: On-premise storage and inspection document catalog.
+- **Sovereign Inspection Workflows**: End-to-end execution of compliance workflows against governing SOPs.
+- **Knowledge Sources (Local RAG)**: Ingestion and indexing of plant standard operating procedures (SOPs), API/OISD standards, and equipment specifications.
+- **Audit Trail & Governance**: Complete tracking of model execution, deterministic rule evaluations, and downloadable `.docx` deliverables.
+- **Sovereignty Telemetry**: Real-time indication of local node status, ensuring confidential data never leaves the plant perimeter.
 
-## Expanding the Oxlint configuration
+## Technology Stack
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- **Framework**: React 19 + TypeScript
+- **Bundler & Dev Server**: Vite 8
+- **Routing**: React Router v7
+- **Iconography**: Lucide React
+- **Linter**: Oxlint
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm 9+
+
+### Installation & Execution
+
+```bash
+# Install dependencies
+npm install
+
+# Start local development server
+npm run dev
+
+# Build production bundle
+npm run build
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+The frontend will start locally on `http://localhost:5173`.
+
+### Environment Configuration
+
+Configure the backend API URL in `.env` (or project root `.env`):
+
+```env
+VITE_API_BASE_URL=http://localhost:8000
+```

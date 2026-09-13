@@ -1,4 +1,4 @@
-"""Tests for AI Workbench model domain types."""
+"""Tests for K.O.S.H AI model domain types."""
 
 import pytest
 

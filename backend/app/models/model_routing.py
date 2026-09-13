@@ -1,4 +1,4 @@
-"""Domain types for AI Workbench model routing."""
+"""Domain types for K.O.S.H AI model routing."""
 
 from dataclasses import dataclass
 

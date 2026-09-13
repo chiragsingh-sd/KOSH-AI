@@ -1,4 +1,4 @@
-"""Model provider interface for AI Workbench."""
+"""Model provider interface for K.O.S.H AI."""
 
 from typing import Protocol, runtime_checkable
 

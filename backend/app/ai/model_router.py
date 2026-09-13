@@ -1,4 +1,4 @@
-"""Model Router for AI Workbench."""
+"""Model Router for K.O.S.H AI."""
 
 from app.ai.model_provider import ModelProvider
 from app.models.model import ModelCapability

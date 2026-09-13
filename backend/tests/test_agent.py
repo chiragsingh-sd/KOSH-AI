@@ -1,4 +1,4 @@
-"""Tests for AI Workbench agent domain types."""
+"""Tests for K.O.S.H AI agent domain types."""
 
 from uuid import uuid4
 

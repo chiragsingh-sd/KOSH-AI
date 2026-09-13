@@ -96,7 +96,7 @@ export const DocumentsPage: React.FC = () => {
               marginBottom: '6px',
             }}
           >
-            Documents
+            Project Documents
           </h1>
 
           <p
@@ -105,7 +105,7 @@ export const DocumentsPage: React.FC = () => {
               fontSize: '0.9rem',
             }}
           >
-            Manage documents uploaded to your AI Workbench.
+            Manage confidential inspection logs, governing SOPs, and engineering assets stored in the K.O.S.H AI on-premise vault.
           </p>
         </div>
 

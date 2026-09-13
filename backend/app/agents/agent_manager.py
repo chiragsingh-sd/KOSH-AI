@@ -1,4 +1,4 @@
-"""Agent Manager for AI Workbench task execution."""
+"""Agent Manager for K.O.S.H AI task execution."""
 
 from app.agents.agent_context_builder import AgentContextBuilder
 from app.ai.model_provider import ModelProvider
@@ -9,7 +9,7 @@ from app.models.model_routing import ModelRoutingRequest
 
 
 class AgentManager:
-    """Coordinate execution of AI Workbench agent tasks."""
+    """Coordinate execution of K.O.S.H AI agent tasks."""
 
     def __init__(
         self,
@@ -67,7 +67,7 @@ class AgentManager:
 
         if not context.has_evidence:
             return (
-                "You are an AI Workbench document agent.\n\n"
+                "You are K.O.S.H Agent, a sovereign on-premise industrial AI assistant.\n\n"
                 "Task:\n"
                 f"{instruction}\n\n"
                 "No supporting evidence was found in the local knowledge base. "
@@ -94,7 +94,7 @@ class AgentManager:
         evidence = "\n\n".join(evidence_blocks)
 
         return (
-            "You are an AI Workbench document agent.\n\n"
+            "You are K.O.S.H Agent, a sovereign on-premise industrial AI assistant.\n\n"
             "Task:\n"
             f"{instruction}\n\n"
             "Use the following local knowledge-base evidence to answer the task.\n"

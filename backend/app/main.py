@@ -15,7 +15,12 @@ from app.repositories.document_repository import DocumentRepository
 
 def create_app() -> FastAPI:
     app = FastAPI(
-        title=settings.PROJECT_NAME,
+        title=f"{settings.PROJECT_NAME} — Sovereign AI Workbench",
+        description=(
+            "K.O.S.H AI (ODIN): Sovereign On-Premise Agentic AI Workbench for "
+            "Confidential Industrial Work (SIH26117)."
+        ),
+        version="1.0.0",
         docs_url="/api/docs",
         openapi_url="/api/openapi.json",
     )

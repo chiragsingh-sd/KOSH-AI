@@ -1,7 +1,8 @@
 {
-  "name": "frontend",
+  "name": "kosh-ai-frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "K.O.S.H AI Sovereign Industrial AI Workbench Frontend | Team ODIN (SIH26117)",
   "type": "module",
   "scripts": {
     "dev": "vite",

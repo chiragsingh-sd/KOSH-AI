@@ -1,4 +1,4 @@
-"""Domain types for AI Workbench agent execution."""
+"""Domain types for K.O.S.H AI agent execution."""
 
 from dataclasses import dataclass
 from enum import Enum

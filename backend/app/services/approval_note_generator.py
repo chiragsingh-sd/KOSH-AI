@@ -37,6 +37,12 @@ class ApprovalNoteGenerator:
 
             document = Document()
 
+            header = document.add_paragraph()
+            header.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            header_run = header.add_run("K.O.S.H AI — Sovereign Industrial Workbench | Team ODIN (SIH26117)\n[CONFIDENTIAL / AIR-GAP AUDITED DELIVERABLE]\n")
+            header_run.font.size = Pt(9)
+            header_run.font.italic = True
+
             title = document.add_paragraph()
             title.alignment = WD_ALIGN_PARAGRAPH.CENTER
             run = title.add_run("Inspection Approval Note")

@@ -1,4 +1,4 @@
-"""Deterministic model provider for AI Workbench."""
+"""Deterministic model provider for K.O.S.H AI."""
 
 from app.models.model import (
     ModelCapability,

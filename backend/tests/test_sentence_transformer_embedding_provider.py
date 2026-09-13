@@ -17,7 +17,7 @@ MODEL_NAME = "all-MiniLM-L6-v2"
 
 def create_chunk(
     chunk_index: int = 0,
-    text: str = "AI Workbench inspection finding.",
+    text: str = "K.O.S.H AI inspection finding.",
 ) -> DocumentChunk:
     """Create a sample document chunk."""
     return DocumentChunk(

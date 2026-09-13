@@ -5,6 +5,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   server: {
-    allowedHosts: ["ai-workbench-frontend.onrender.com"]
+    port: 5173,
+    host: '0.0.0.0'
   }
 })

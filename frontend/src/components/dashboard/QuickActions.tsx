@@ -1,8 +1,8 @@
 import React from 'react';
 import {
   FileSearch,
-  GitCompare,
-  FileOutput,
+  BookOpenCheck,
+  History,
   ArrowUpRight,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -16,22 +16,22 @@ interface QuickAction {
 
 const actions: QuickAction[] = [
   {
-    title: 'Analyze Document',
-    description: 'Run the inspection approval workflow',
+    title: 'Run Compliance Analysis',
+    description: 'Evaluate equipment logs against governing SOP evidence',
     icon: <FileSearch size={20} />,
     to: '/workflows',
   },
   {
-    title: 'Compare with SOP',
-    description: 'Search and explore organizational knowledge',
-    icon: <GitCompare size={20} />,
+    title: 'Manage Knowledge Sources',
+    description: 'Index plant SOPs, specifications, and safety guidelines',
+    icon: <BookOpenCheck size={20} />,
     to: '/knowledge',
   },
   {
-    title: 'Generate Report',
-    description: 'Create an approval note from an inspection',
-    icon: <FileOutput size={20} />,
-    to: '/workflows',
+    title: 'Audit Trail & Provenance',
+    description: 'Inspect execution logs, model decisions, and generated deliverables',
+    icon: <History size={20} />,
+    to: '/history',
   },
 ];
 
@@ -39,7 +39,7 @@ export const QuickActions: React.FC = () => {
   return (
     <section aria-labelledby="quick-actions-title">
       <div className="section-title" id="quick-actions-title">
-        Quick Actions
+        Controlled Operations
       </div>
 
       <div className="quick-actions-grid">

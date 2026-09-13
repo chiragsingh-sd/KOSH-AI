@@ -192,22 +192,21 @@ export const UploadDropzone: React.FC<UploadDropzoneProps> = ({
           <div className="upload-title">
             {isDragging
               ? 'Drop your document here'
-              : 'Upload a document to get started'}
+              : 'Upload an industrial document to local vault'}
           </div>
 
           <div className="upload-subtitle">
             Drag and drop your file here, or{' '}
-            <span className="upload-link">browse files</span>
+            <span className="upload-link">browse local storage</span>
           </div>
 
           <div className="upload-formats">
-            PDF | DOCX | XLSX | PPTX | Max {MAX_SIZE_MB} MB
+            PDF | DOCX | XLSX | PPTX | Max {MAX_SIZE_MB} MB · Stored On-Premise
           </div>
 
           <div className="upload-hint">
             <FileText size={14} />
-            Inspection reports, SOPs, maintenance reports and other enterprise
-            documents
+            Plant inspection reports, governing SOPs, maintenance logs, and engineering specifications
           </div>
         </>
       ) : state.type === 'uploading' ? (
@@ -215,11 +214,11 @@ export const UploadDropzone: React.FC<UploadDropzoneProps> = ({
           <div className="upload-spinner" aria-hidden="true" />
 
           <div className="upload-title" style={{ marginTop: '16px' }}>
-            Uploading document...
+            Encrypting and storing locally...
           </div>
 
           <div className="upload-subtitle">
-            Storing your document securely and preparing it for processing.
+            Persisting file to local on-premise vault and generating audit metadata.
           </div>
         </>
       ) : state.type === 'success' ? (
@@ -236,12 +235,11 @@ export const UploadDropzone: React.FC<UploadDropzoneProps> = ({
             className="upload-title"
             style={{ color: 'var(--success-color)' }}
           >
-            Document ready
+            Secured in Local Storage
           </div>
 
           <div className="upload-subtitle">
-            Your document has been uploaded successfully and is ready for
-            processing.
+            Document stored in local on-premise vault and registered in project database.
           </div>
 
           <div className="upload-result-row">

@@ -1,26 +1,46 @@
 import React from 'react';
-import { Settings, User, Hexagon } from 'lucide-react';
+import { ShieldCheck, Lock, ShieldAlert } from 'lucide-react';
 
 export const TopBar: React.FC = () => {
   return (
     <header className="topbar">
       <div className="topbar-left">
         <div className="topbar-logo">
-          <Hexagon className="topbar-logo-icon" size={24} />
-          <span>AI Workbench</span>
+          <div className="topbar-logo-mark">
+            <Lock size={18} className="topbar-logo-icon" />
+          </div>
+          <div className="topbar-branding">
+            <div className="topbar-title">
+              <span className="brand-name">K.O.S.H AI</span>
+              <span className="brand-team">ODIN</span>
+            </div>
+            <span className="topbar-subtitle">Sovereign Industrial AI Workbench · SIH26117</span>
+          </div>
         </div>
-        <span className="badge-local">LOCAL</span>
+
+        <div className="sovereignty-badge" title="Data remains strictly confined to on-premise infrastructure">
+          <ShieldCheck size={14} className="sovereignty-icon" />
+          <span>AIR-GAPPED SOVEREIGN RUNTIME</span>
+        </div>
       </div>
+
       <div className="topbar-right">
-        <div className="status-indicator">
-          <div className="status-dot"></div>
-          <span>System Online</span>
+        <div className="system-health-pill">
+          <div className="status-dot pulsing"></div>
+          <span className="health-label">Node Status: <strong>Online / Air-Gapped</strong></span>
         </div>
-        <button className="icon-btn" aria-label="Settings">
-          <Settings size={18} />
-        </button>
-        <div className="profile-avatar">
-          <User size={18} />
+
+        <div className="classification-pill" title="Security clearance for confidential PSU/industrial data">
+          <ShieldAlert size={13} />
+          <span>CONFIDENTIAL // PSU-GRADE</span>
+        </div>
+
+        <div className="operator-profile">
+          <div className="operator-avatar">PSU</div>
+          <div className="operator-info">
+            <span className="operator-name">Refinery Supervisor</span>
+            <span className="operator-role">Role: Lead Engineer (RBAC)</span>
+          </div>
         </div>
       </div>
     </header>

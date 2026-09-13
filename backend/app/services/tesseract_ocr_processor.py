@@ -1,4 +1,4 @@
-﻿"""Tesseract-backed OCR processing."""
+"""Tesseract-backed OCR processing."""
 
 from io import BytesIO
 from pathlib import Path
@@ -39,10 +39,11 @@ class TesseractOcrProcessor:
         self.tesseract_cmd = resolved_tesseract_path
         self.language = language
 
-        pytesseract.pytesseract.tesseract_cmd = resolved_tesseract_path
+        if resolved_tesseract_path:
+            pytesseract.pytesseract.tesseract_cmd = resolved_tesseract_path
 
     @staticmethod
-    def _resolve_tesseract(tesseract_cmd: str | None) -> str:
+    def _resolve_tesseract(tesseract_cmd: str | None) -> str | None:
         """Resolve Tesseract from explicit config, settings, PATH, or Windows default."""
         configured_path = tesseract_cmd or settings.TESSERACT_CMD
 
@@ -68,9 +69,7 @@ class TesseractOcrProcessor:
         if windows_default.is_file():
             return str(windows_default)
 
-        raise OcrProcessingError(
-            "Tesseract executable could not be found"
-        )
+        return None
 
     def process(self, document: Document) -> OcrProcessingResult:
         """Run OCR against every page of a stored PDF."""
@@ -79,6 +78,11 @@ class TesseractOcrProcessor:
         if not source_path.is_file():
             raise OcrProcessingError(
                 "OCR source document is unavailable"
+            )
+
+        if not self.tesseract_cmd:
+            raise OcrProcessingError(
+                "Tesseract executable could not be found"
             )
 
         try:

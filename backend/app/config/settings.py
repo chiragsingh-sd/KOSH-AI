@@ -1,4 +1,4 @@
-﻿from pathlib import Path
+from pathlib import Path
 from typing import List
 
 from pydantic_settings import BaseSettings
@@ -8,10 +8,10 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "AI Workbench"
+    PROJECT_NAME: str = "K.O.S.H AI"
     APP_ENV: str = "development"
     MAX_UPLOAD_SIZE_MB: int = 25
-    DATABASE_PATH: str = "./ai_workbench.db"
+    DATABASE_PATH: str = "./kosh_ai.db"
     UPLOAD_DIR: str = "../data/uploads"
     OUTPUT_DIR: str = "../data/outputs"
     ALLOWED_ORIGINS: List[str] = [

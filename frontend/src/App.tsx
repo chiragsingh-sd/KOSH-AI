@@ -30,8 +30,8 @@ function App() {
             path="sops"
             element={
               <PlaceholderPage
-                title="SOP Library"
-                description="Manage your Standard Operating Procedures."
+                title="SOP &amp; Standards Library"
+                description="Central repository for governing plant SOPs, OISD standards, and API engineering specifications. All documents are chunked and embedded into the local on-premise vector index."
               />
             }
           />
@@ -40,8 +40,8 @@ function App() {
             path="history"
             element={
               <PlaceholderPage
-                title="History"
-                description="Review past workflow executions and agent activities."
+                title="Audit Trail &amp; Workflow Logs"
+                description="Immutable log of K.O.S.H Agent executions, deterministic rule evaluations, operator approvals, and generated deliverable provenance."
               />
             }
           />

@@ -1,4 +1,4 @@
-"""Tests for the AI Workbench Model Router."""
+"""Tests for the K.O.S.H AI Model Router."""
 
 import pytest
 

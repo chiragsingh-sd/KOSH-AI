@@ -40,32 +40,32 @@ const stages: {
 }[] = [
   {
     key: 'extracting',
-    label: 'Document extraction',
-    description: 'Reading inspection report content',
+    label: 'Document Ingestion',
+    description: 'Parsing inspection report pages',
     icon: <FileText size={17} />,
   },
   {
     key: 'retrieving',
-    label: 'SOP retrieval',
-    description: 'Searching local knowledge base',
+    label: 'Local SOP Retrieval',
+    description: 'Matching organizational standards (RAG)',
     icon: <Search size={17} />,
   },
   {
     key: 'analyzing',
-    label: 'AI analysis',
-    description: 'Evaluating inspection findings',
+    label: 'AI Findings Analysis',
+    description: 'Extracting structured findings & severity',
     icon: <Sparkles size={17} />,
   },
   {
     key: 'deciding',
-    label: 'Decision',
-    description: 'Applying approval rules',
+    label: 'Deterministic Decision',
+    description: 'Applying auditable safety thresholds',
     icon: <FileCheck2 size={17} />,
   },
   {
     key: 'generating',
-    label: 'Document generation',
-    description: 'Creating approval note',
+    label: 'Deliverable Compiler',
+    description: 'Creating signed DOCX approval note',
     icon: <FileText size={17} />,
   },
 ];
@@ -86,7 +86,7 @@ export const ApprovalWorkflowPanel: React.FC = () => {
   const [documents, setDocuments] = useState<DocumentRecord[]>([]);
   const [selectedDocumentId, setSelectedDocumentId] = useState('');
   const [instruction, setInstruction] = useState(
-    'Analyze this inspection report and determine whether approval should be granted based on the available SOP evidence.',
+    'Analyze this industrial inspection report and determine whether equipment compliance is granted based on the governing SOP evidence.',
   );
   const [result, setResult] = useState<ApprovalWorkflowResponse | null>(null);
   const [loadingDocuments, setLoadingDocuments] = useState(true);
@@ -222,11 +222,11 @@ export const ApprovalWorkflowPanel: React.FC = () => {
     <section className="approval-workflow-panel">
       <div className="workflow-panel-header">
         <div>
-          <span className="eyebrow">FLAGSHIP WORKFLOW</span>
-          <h2>Inspection Approval</h2>
+          <span className="eyebrow">K.O.S.H AI · SOVEREIGN COMPLIANCE WORKFLOW</span>
+          <h2>Industrial Inspection &amp; SOP Compliance</h2>
           <p>
-            Process an inspection PDF, retrieve local SOP evidence, and generate
-            an approval decision.
+            Ingest inspection reports, ground findings against governing SOP standards (Local RAG),
+            and evaluate deterministic safety rules to compile an auditable deliverable.
           </p>
         </div>
 
@@ -235,7 +235,7 @@ export const ApprovalWorkflowPanel: React.FC = () => {
 
       <div className="workflow-form">
         <label>
-          Inspection document
+          Inspection Report (PDF)
 
           <select
             value={selectedDocumentId}
@@ -260,7 +260,7 @@ export const ApprovalWorkflowPanel: React.FC = () => {
         </label>
 
         <label>
-          Analysis instruction
+          Compliance Directive / Analysis Instruction
 
           <textarea
             value={instruction}
@@ -370,7 +370,7 @@ export const ApprovalWorkflowPanel: React.FC = () => {
             ) : (
               <>
                 <Play size={18} />
-                Run Approval Workflow
+                Execute Sovereign Compliance Workflow
               </>
             )}
           </button>
@@ -417,7 +417,7 @@ export const ApprovalWorkflowPanel: React.FC = () => {
               <FileText size={18} />
 
               <div>
-                <strong>Approval note generated</strong>
+                <strong>Signed approval deliverable generated</strong>
                 <span>{outputFilename}</span>
               </div>
 
